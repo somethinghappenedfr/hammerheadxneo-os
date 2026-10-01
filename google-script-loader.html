@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <title>NEO OS</title>
+  <title>HammerHead OS</title>
   <style>
     :root{color-scheme:dark}
     *{box-sizing:border-box}
@@ -21,7 +21,7 @@
   <main id="choose">
     <button id="blank" disabled>Open in about:blank</button>
     <button id="full" disabled>Full screen</button>
-    <p id="status">Checking NEO OS...</p>
+    <p id="status">Checking HammerHead OS...</p>
   </main>
   <script>
     (() => {
@@ -109,7 +109,7 @@
       function createFrame(targetDocument) {
         const frame = targetDocument.createElement("iframe")
         frame.src = hostedApp
-        frame.title = "NEO OS"
+        frame.title = "HammerHead OS"
         frame.allow = "autoplay; clipboard-read; clipboard-write; fullscreen; gamepad"
         frame.allowFullscreen = true
         frame.referrerPolicy = "strict-origin-when-cross-origin"
@@ -121,7 +121,7 @@
       function enableLaunch() {
         blankButton.disabled = false
         fullButton.disabled = false
-        status.textContent = "Choose how to launch NEO OS"
+        status.textContent = "Choose how to launch HammerHead OS"
       }
 
       blankButton.addEventListener("click", () => {
@@ -130,7 +130,7 @@
           status.textContent = "Allow pop-ups and try again."
           return
         }
-        popup.document.title = "NEO OS"
+        popup.document.title = "HammerHead OS"
         popup.document.documentElement.style.cssText = "width:100%;height:100%;margin:0;overflow:hidden;background:#000"
         popup.document.body.style.cssText = "width:100%;height:100%;margin:0;overflow:hidden;background:#000"
         popup.document.body.replaceChildren(createFrame(popup.document))
@@ -146,7 +146,7 @@
 
       fetch(hostedApp + "&launcher-check=" + Date.now(), {mode:"no-cors",cache:"no-store"})
         .then(enableLaunch)
-        .catch(() => { status.textContent = "NEO OS could not load. Check your connection and refresh." })
+        .catch(() => { status.textContent = "HammerHead OS could not load. Check your connection and refresh." })
     })()
   </script>
 </body>
