@@ -21,7 +21,7 @@
   <div id="choose">
     <button id="blank" disabled>Open in about:blank</button>
     <button id="full" disabled>Full screen</button>
-    <p id="status">Checking HammerHead OS...</p>
+    <p id="status">Checking NEO OS...</p>
   </div>
   <script>
     (() => {
@@ -41,7 +41,7 @@
       function createFrame(targetDocument, url) {
         const frame = targetDocument.createElement("iframe");
         frame.src = url;
-        frame.title = "HammerHead OS";
+        frame.title = "NEO OS";
         frame.allow = "autoplay; clipboard-read; clipboard-write; fullscreen; gamepad";
         frame.allowFullscreen = true;
         frame.referrerPolicy = "strict-origin-when-cross-origin";
@@ -51,7 +51,7 @@
 
       function applyTabAppearance(targetDocument, appearance) {
         if (!targetDocument || !appearance || typeof appearance.title !== "string" || typeof appearance.icon !== "string") return;
-        const title = appearance.title.trim().slice(0, 80) || "HammerHead OS";
+        const title = appearance.title.trim().slice(0, 80) || "NEO OS";
         let titleNode = targetDocument.querySelector("title");
         if (!titleNode) {
           titleNode = targetDocument.createElement("title");
@@ -73,7 +73,7 @@
       function enableLaunch() {
         blankButton.disabled = false;
         fullButton.disabled = false;
-        status.textContent = "Choose how to launch HammerHead OS";
+        status.textContent = "Choose how to launch NEO OS";
       }
 
       blankButton.addEventListener("click", () => {
